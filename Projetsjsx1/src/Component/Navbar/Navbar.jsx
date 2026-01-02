@@ -49,7 +49,7 @@ const Menu = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({handleOrderPopup}) => {
   return (
     <div className='shadow-md bg-white
     dark:bg-gray-900 dark:text-white duration-200
@@ -96,7 +96,7 @@ const Navbar = () => {
           {/* other button  */}
 
           <button
-          onClick={() => alert("Le classement n'est pas encore disponible")}
+          onClick={() => handleOrderPopup()}
           className='bg-gradient-to-r from-[#fea928]
           to-[#ed8900] transition-all duration-300
           text-white py-1 px-4 rounded-full flex 
@@ -121,7 +121,7 @@ const Navbar = () => {
       </div>
      </div>
      {/* lower Navbar */}
-     <div className='flex justify-center'>
+     <div data-aos="zoom-in" className='flex justify-center'>
       <ul className='sm:flex hidden items-center'>
         {Menu.map((data)=> (
             <li key={data.id}>

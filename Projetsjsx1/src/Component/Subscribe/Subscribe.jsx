@@ -26,10 +26,11 @@ const Subscribe = () => {
                 >
                 Get Notified About New Product
                 </h1>
-                <input 
+                <input
+
                 data-aos='fade-up'
                 placeholder='Enter your email'
-                className='w-full p-3'
+                className='w-full p-3 text-black'
                 type="text" />
             </div>
         </div>

@@ -29,7 +29,7 @@ const ImageList = [
     },
 ];
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
     var settings = {
         dots:false,
         arrows:false,
@@ -86,11 +86,7 @@ const Hero = () => {
                           data-aos-delay='300'
                         >
                            <button
-                            onClick={() => {
-                            document.getElementById('product-section')?.scrollIntoView({ 
-                            behavior: 'smooth' 
-                            });
-                            }}
+                            onClick={handleOrderPopup}
                             className='bg-gradient-to-r
                             from-primary to-secondary hover:scale-105
                             duration-200 text-white py-2 px-4
